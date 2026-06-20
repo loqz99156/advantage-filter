@@ -34,7 +34,7 @@ Advantage Filter 会把定位拆成四个硬条件：
 
 - 自媒体账号定位
 
-- 小红书、抖音、公众号、X/Twitter 等账号的主标签判断
+- 小红书、抖音、视频号、公众号、X/Twitter 等账号的主标签判断
 
 - 知识服务、咨询服务、陪跑服务的定位初筛
 
@@ -270,49 +270,6 @@ python scripts/trigger_eval.py
 
 这些脚本会检查结构、资源边界和触发规则。
 
-## 发布到 GitHub
-
-建议把整个 `advantage-filter` 目录作为仓库根目录提交：
-
-```bash
-git init
-git add .
-git commit -m "Initial release"
-git branch -M main
-git remote add origin https://github.com/loqz99156/advantage-filter.git
-git push -u origin main
-```
-
-发布前请确认：
-
-- `SKILL.md` 在仓库根目录。
-
-- `manifest.json`、`references/`、`evals/`、`scripts/` 一起提交。
-
-- README 里的 GitHub 地址已经替换成真实仓库地址。
-
-- 如果你使用 MIT 协议，仓库根目录最好同时放置 `LICENSE` 文件。
-
 ## License
 
 MIT License
-
-Copyright (c) 2026
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
