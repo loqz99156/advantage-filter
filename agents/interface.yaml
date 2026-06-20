@@ -1,0 +1,25 @@
+interface:
+  display_name: "Advantage Commercialization Filter"
+  short_description: "Filter personal traits and experiences into commercially viable positioning through real evidence, content proof, and commercial handoff."
+  default_prompt: "Use $advantage-filter to diagnose my personal IP, creator account, knowledge-service, or personal brand positioning from real experience, market demand, and commercial handoff."
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "claude"
+    - "generic"
+    - "vscode"
+  activation:
+    mode: "manual-or-description-route"
+    paths:
+      - ".claude/skills/advantage-filter/SKILL.md"
+  execution:
+    context: "inline"
+    shell: "none-required"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    claude: "native-skill"
+    generic: "read-skill-md-plus-references"
+    vscode: "agent-skills-source-with-local-references"

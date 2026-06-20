@@ -1,0 +1,45 @@
+{
+  "name": "advantage-filter",
+  "version": "1.0.0",
+  "mode": "local",
+  "owner": "missing evidence",
+  "review_cadence": "missing evidence",
+  "source_inputs": [
+    {
+      "path": "个人优势定位方法论反向抽象.md",
+      "label": "file-backed fixture",
+      "role": "methodology source"
+    }
+  ],
+  "output_contract": [
+    "定位判断卡",
+    "反证诊断卡",
+    "最小追问卡",
+    "完整定位资产（仅在明确完整方案请求时）",
+    "最小内容验证动作"
+  ],
+  "near_neighbor_exclusions": [
+    "完整账号定位方案仅在明确请求时走本 skill 的完整方案路径",
+    "平台起号、涨粉、爆款运营应转向对应平台 launch expert",
+    "纯内容选题不应伪装成优势定位",
+    "纯心理测评、职业性格测试、情绪疗愈不属于本 skill 主边界"
+  ],
+  "rollback_boundary": "Revert changes under .claude/skills/advantage-filter plus the related tasks/todo.md review entry.",
+  "input_files": [
+    "SKILL.md",
+    "references/method-cards.md",
+    "references/distillation.md",
+    "evals/evals.json",
+    "agents/interface.yaml",
+    "reports/*.md",
+    "scripts/*.py"
+  ],
+  "gates": [
+    "scripts/validate_skill.py",
+    "scripts/resource_boundary_check.py",
+    "scripts/trigger_eval.py"
+  ],
+  "last_validation_status": "passed 2026-06-20 via validate_skill.py, resource_boundary_check.py, trigger_eval.py",
+  "telemetry": "missing evidence",
+  "approval_record": "user requested an independent, easy-to-invoke local skill based on the source methodology"
+}
